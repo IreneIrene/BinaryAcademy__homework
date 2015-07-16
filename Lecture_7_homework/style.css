@@ -1,0 +1,269 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body {
+    font: 14px Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 2;
+}
+
+h1 {
+    color: #ffa500;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+    background: #000;
+    min-height: 50px;
+    width: 100%;
+}
+
+#logo {
+    display: inline-block;
+    min-width: 100px;
+    position:relative;
+    width: 20%;
+}
+
+#logo img{
+    display: inline-block;
+    height: 50px;
+    margin: 10px 15px;
+    vertical-align: middle;
+    width: 82px;
+}
+
+/* Menu */
+nav {
+    display: inline-block;
+    text-align: right;
+    width: 78%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #fff;
+    display: block;
+    padding: 28px 10px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.menuIcon {
+    background: #000;
+    display: none;
+    margin-right: 10px;
+    margin-top: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.menuIcon a {
+    border-radius: 2px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+.menuIcon a:hover {
+    background: #ffa500;
+}
+
+/* Main
+-----------------------------------------------------------------------------*/
+#main {
+    display: table;
+    min-height: 100%;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Sidebar */
+#sidebar {
+    display: table-cell;
+    background: #f5f2f0;
+    border-right: 1px solid #d5d2d0;
+    max-width: 400px;
+    padding: 15px;
+    vertical-align: top;
+    width: 18%;
+}
+
+a[href="#sidebarExpand"] {
+    color: #ffa500;
+    display: none;
+    font-weight: bold;
+    padding: 15px;
+    text-decoration: none;
+    width: 100%;
+}
+
+a[href="#sidebarExpand"]:hover {
+    background: #ffa500;
+    color: #fff;
+}
+
+/* Content */
+#content {
+    background: #fff;
+    display: table-cell;
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    width: 82%;
+}
+
+#content-inner {
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: justify;
+}
+
+#content-inner img {
+    width: 100%;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+    background: #000;
+    color: #fff;
+    display: table;
+    text-align: center;
+    width: 100%;
+}
+
+#footer span {
+    display: table-cell;
+    padding: 15px 0;
+    vertical-align: middle;
+}
+
+/* Media
+-----------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+
+    nav.menuOpen {
+        display: block;
+        width: 100%;
+    }
+
+    nav.menuOpen ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav.menuOpen ul li {
+        background: #191919;
+        margin-bottom: 1px;
+        width: 100%;
+    }
+
+    nav.menuOpen ul li a{
+        padding: 10px
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .menuIcon {
+        display: block;
+        float: right;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.menuOpen {
+        display: block;
+        width: 100%;
+    }
+
+    nav.menuOpen ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+
+    #sidebar {
+        border-right: none;
+        display: table;
+        max-width: none;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    a[href="#sidebarExpand"] {
+        display: inline-block;
+    }
+
+    #sidebar p {
+        display: none;
+    }
+
+    #sidebar.sidebarOpen p {
+        display: block;
+        margin: 0 15px 15px 15px;
+        text-align: left !important;
+    }
+
+    #content {
+        display: table;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width : 1824px) {
+
+    html, body {
+        font-size: 16px;
+    }
+
+
+    #content-inner {
+        max-width: 800px;
+    }
+
+}

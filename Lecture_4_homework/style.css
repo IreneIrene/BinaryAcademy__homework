@@ -1,0 +1,125 @@
+body {
+    background: #eeeeee;
+    font: 14px Arial, sans-serif;
+}
+
+::-webkit-input-placeholder { font-style: italic; }
+::-moz-placeholder { font-style: italic; }
+:-ms-input-placeholder { font-style: italic; }
+:-moz-placeholder { font-style: italic; }
+
+input[type="text"]::-ms-clear { display: none; } /* remove IE's X button */
+
+/* Goods Container */
+
+#goods-container {
+    background: #ffffff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    margin: auto;
+    padding: 20px;
+    width: 38%;
+}
+
+#goods-container h1 {
+    text-align: center;
+}
+
+#add-product {
+    font-size: 24px;
+    height: 28px;
+    margin-bottom: 20px;
+    padding: 1.1% 2.2%;
+    width: 95%;
+}
+
+#clear-all-btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+#clear-all-btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+/* List */
+
+#goods-list {
+    list-style: none;
+    padding: 0;
+}
+
+.product {
+    border-bottom: 1px solid #cccccc;
+    padding: 9px 20px 9px 0;
+    position:relative;
+}
+
+.product:last-child {
+    border-bottom: none;
+}
+
+.product-name {
+    border: none;
+    font-size: 24px;
+    height: 28px;
+    margin-bottom: 0 !important;
+    outline: none;
+    padding: 1.1% 2.2%;
+    width: 85% !important;
+}
+
+.check-product {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.check-product:checked + .product-name {
+    text-decoration: line-through;
+}
+
+.checked {
+    opacity: 0.4;
+}
+
+.remove-btn {
+    color: #ff0000;
+    cursor: pointer;
+    display: none;
+    font-size: 30px;
+    position: absolute;
+    right: 5px;
+}
+
+.product:hover .remove-btn {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+

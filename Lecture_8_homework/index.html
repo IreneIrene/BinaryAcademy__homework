@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="goods-list" ng-controller="GoodsCtrl as goods">
+        <h1>Goods</h1>
+        <label>Search:<input type="text" ng-model="search.$" /></label><br>
+        Number of goods: {{goods.number}}<br>
+        <button ng-click="goods.addProduct()">Add Product</button>
+        <button ng-click="goods.toggleList()">Toggle</button>
+        <table ng-show="goods.showList">
+            <tr ng-repeat="product in goods.goods | filter:search track by $index">
+                <td>{{product.name}}</td>
+                <td><span>{{product.price | currency}}</span></td>
+            </tr>
+        </table>
+    </div>
+    <div id="people-list" ng-controller="PeopleCtrl as people">
+        <h1>People</h1>
+        <label>Search:<input type="text" ng-model="search.name" /></label><br>
+        Number of people: {{people.number}}<br>
+        <button ng-click="people.addPerson()">Add Person</button>
+        <button ng-click="people.toggleList()">Toggle</button>
+        <table ng-show="people.showList">
+            <tr ng-repeat="person in people.people | filter:search track by $index" ng-click="people.removePerson(person)">
+                <td><img ng-src="{{person.avatar.src}}"></td>
+                <td>User:{{person.name | uppercase}}</td>
+                <td>{{person.birthplace}}</td>
+                <td>{{person.age}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

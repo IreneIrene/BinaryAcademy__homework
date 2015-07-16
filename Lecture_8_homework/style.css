@@ -1,0 +1,56 @@
+body {
+    background: #F2F2F2;
+    font: 14px Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    width: 940px;
+}
+
+#goods-list,
+#people-list {
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
+    float: left;
+    margin: 0 15px;
+    padding: 20px;
+    width: 400px;
+}
+
+h1 {text-align: center;}
+
+
+input[type="text"] {
+    margin: 5px 10px 20px 10px;
+}
+
+
+table  {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+span {
+    float: right !important;
+}
+
+tr {
+    border-bottom: 1px solid #cccccc;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+
+button {
+    margin: 10px 5px 10px 0;
+}

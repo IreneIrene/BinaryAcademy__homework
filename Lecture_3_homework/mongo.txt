@@ -1,0 +1,5 @@
+db.mycollection.find( {scores: { $all: [ { "$elemMatch" : { score: { $gt: 93, $lt: 95 } } } ] } } );
+
+db.mycollection.aggregate( [ { $unwind : "$scores" },{ $match: { "scores.type": "exam", "scores.score": { $gt : 90 } } } ] );
+
+db.mycollection.update( { name: "Vinnie Auerbach" }, { $set: { accepted: true } }, { multi: true } );
